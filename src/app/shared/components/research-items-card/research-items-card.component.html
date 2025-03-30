@@ -1,0 +1,43 @@
+<div class="card">
+  @for(el of research_items() | slice:0:displayCount; track el.id){
+  <div class="reaserh-card" >
+    <div class="simple-research-card">
+      <h3>
+        <a class="research-title" [href]="el.link">{{el.title}}</a>
+      </h3>
+    </div>
+
+    <div class="authors">
+      <p>
+        @for(elt of el.authors; track elt.length){
+        <span>{{elt}} <span *ngIf="!$last">| </span></span>
+        }@empty{
+
+        <p>Nothing founded</p>
+
+        }
+      </p>
+    </div>
+
+    <div class="date">
+      <strong>{{el.event}} {{el.date | date: "yyyy"}} </strong> {{el.date | date: "MMM yyyy"}}
+    </div>
+    <img [src]="el.img" [alt]="el.id">
+
+    <div class="links-contains">
+      <div class="links">
+        <a *ngIf="el.github_link" [href]="el.full_paper" class="full_paper">FULL PAPER
+        </a>
+        <a *ngIf="el.github_link" [href]="el.github_link" class="full_paper"><i class="fa-brands fa-github"></i> GITHUB
+        </a>
+      </div>
+      <div class="links">
+        <a *ngIf="el.github_link === null" [href]="el.full_paper" class="full_paper">FULL PAPER
+        </a>
+        <a [href]="el.link" class="read-more">READ MORE >
+        </a>
+      </div>
+    </div>
+  </div>
+  }
+</div>

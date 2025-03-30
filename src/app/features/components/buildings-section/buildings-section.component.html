@@ -1,0 +1,14 @@
+<section id="buildings">
+  <h2>Transforming Lives Through AI-Driven Solutions</h2>
+  <div class="intro">
+    <p>Supremum drives AI innovation through research, creating transformative solutions that empower individuals and
+       communities in various industries.</p>
+
+    @for(item of buildingItems(); track item.id){
+    <app-buildings-card [buildingItem]="item" [ngClass]="getBuildingClass(item)"/>
+    }
+    @empty{
+    <p>We have not buildings</p>>
+    }
+  </div>
+</section>

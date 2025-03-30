@@ -1,0 +1,36 @@
+<header>
+  <div class="title">
+    <div><a>
+      <img src="img/logo/supremum.png">
+      <p>Supremum</p>
+    </a></div>
+  </div>
+
+  <div class="hamburger-menu" (click)="menu()">
+    <span [ngClass]="!menu_open ? 'menu_close_top' : 'menu_open_top'"></span>
+    <span [ngClass]="!menu_open ? 'menu_open_middle' : 'menu_close_middle'"></span>
+    <span [ngClass]="!menu_open ? 'menu_close_bottom' : 'menu_open_bottom'"></span>
+  </div>
+
+  <nav [ngClass]="!menu_open ? 'menu_nav_close' : 'menu_nav_open'">
+    <div [ngClass]="menu_open ? 'menu_nav_div' : 'menu_nav_div_none'">
+      <a href="#" (mouseenter)="productShow()" (mouseleave)="productHidden()">PRODUCTS</a>
+      <a href="#">SOLUTIONS</a>
+      <a href="#">RESEARCH</a>
+      <a href="#">NEWS</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CAREERS</a>
+      <a href="#">CONTACT</a>
+      <a href="#">ETHICS CONTACT POINT</a>
+    </div>
+
+    <div class="products" [ngClass]="showProduct ? 'showProduct' : 'dontShowProduct'" >
+      <a (mouseenter)="productShow()" (mouseleave)="productHidden()" href="https://concourguide-cmr.web.app/home">
+        ConcourGuide</a>
+      <a (mouseenter)="productShow()" (mouseleave)="productHidden()" href="#">KnowNetix</a>
+      <a (mouseenter)="productShow()" (mouseleave)="productHidden()" href="#">MySafe</a>
+      <a (mouseenter)="productShow()" (mouseleave)="productHidden()" href="#">DNA</a>
+      <a (mouseenter)="productShow()" (mouseleave)="productHidden()" href="#">Automatik</a>
+    </div>
+  </nav>
+</header>

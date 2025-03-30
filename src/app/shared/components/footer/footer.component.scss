@@ -1,0 +1,249 @@
+#footer{
+  color: white;
+  background-color: #364D55;
+  padding: 55px 0 50px;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden !important;
+}
+.wrap{
+  margin: 0 73px;
+}
+
+.wrap ul{
+  margin: 45px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: start;
+  list-style: none;
+  column-gap: 0;
+}
+
+.footer-nav{
+  row-gap: 40px;
+}
+
+.wrap ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 0 30px 0 0;
+  row-gap: 10px;
+}
+
+.wrap ul li a{
+  font-size: 17px;
+  color: #CCCCCC;
+}
+
+.wrap ul li ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  margin: 0;
+}
+
+.wrap ul li ul li{
+  margin: 0 4px 0 0;
+}
+
+.wrap ul li ul li a{
+  font-size: 13px;
+}
+.footer-extra{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  column-gap: 70px;
+}
+.footer-extra .svg svg{
+  font-size: 15px;
+  width: 200px;
+}
+.copyright-block{
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+
+  div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    a{
+      text-decoration: underline;
+      color: white;
+      font-size: 14px;
+      font-weight: 100;
+    }
+  }
+}
+.copyright-block p{
+  font-size: 13px;
+  margin: 0;
+}
+.copyright-block ul{
+  font-size: 14px;
+  font-weight: 100;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin:0 0 0 44px;
+}
+.copyright-block ul li{
+  margin: 0;
+  padding: 0;
+}
+.copyright-block ul li a{
+  text-decoration: underline;
+}
+.footer-logo{
+  margin: 0 63px 0 0;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.social{
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-line{
+  border-top: 1px solid #738388;
+  float: left;
+  width: calc(100% - 333px);
+}
+.social-wrap{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.social-wrap a{
+  margin: 0 10px;
+  border: 1px solid white;
+  color: white;
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.social-wrap ul{
+  margin: 0;
+  max-width: 50px;
+}
+.right-line{
+  width: 104px;
+  border-top: 1px solid #738388;
+  float: left;
+}
+.trigger a{
+  display: block;
+  width: 31px;
+  height: 31px;
+  border: 1px solid white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 20px;
+}
+
+.svg a{
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  img{
+    width: 100px;
+    border-radius: 10px;
+  }
+  p{
+    color: #CCC;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .footer-extra{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  .copright-block-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo{
+    margin: 0;
+    position: relative;
+  }
+
+  .footer-logo::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid black;
+    left: 0;
+    bottom: -20px;
+  }
+
+  .copyright-block{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-line, .right-line{
+    display: none;
+  }
+}
+
+@media (max-width: 845px) {
+  .wrap ul{
+    justify-content: start;
+  }
+}
+
+@media (max-width: 750px) {
+  .wrap ul{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-nav{
+    row-gap: 30px;
+  }
+
+  .wrap ul li{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    row-gap: 10px;
+  }
+
+  .wrap ul li ul{
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,149 @@
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: transparent;
+  border: none;
+}
+.reaserh-card{
+  margin-bottom: 5px;
+  width: 410px;
+  height: 652px;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  padding: 30px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  transition: ease-in-out 0.3s;
+}
+
+.reaserh-card:hover{
+  transition: ease-in-out 0.3s;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.simple-research-card{
+  font-size: 18px;
+  color: #364D55;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h3{
+  font-size: 18px;
+}
+.research-title{
+  color: #FA3C66;
+  padding: 0 0 20px;
+}
+.research-title:hover{
+  color: #52276B;
+}
+.authors{
+  color: #666666;
+}
+.authors p{
+  font-size: 13px;
+  margin: 0 0 13px;
+  font-weight: 600;
+}
+.date{
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+img{
+  margin: 0 0 20px;
+  border-radius: 7px;
+  height: 300px;
+  object-fit: cover;
+}
+.links-contains{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+}
+.links{
+  color: #364D55;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.full_paper, .read-more{
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 13px 0 12px;
+}
+a {
+  color: #D93354;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.full_paper{
+  border: 1px solid #D93354;
+  transition: 0.4s ease-in-out;
+}
+.full_paper:hover{
+  background-color: #D93354;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+.read-more{
+  color: #52276B;
+  border: 1px solid #52276B;
+  transition: 0.4s ease-in-out;
+
+}
+.read-more:hover{
+  background-color: #52276B;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+@media (max-width: 1340px){
+
+  .card{
+    gap: 20px;
+    width: 100%;
+  }
+
+  .reaserh-card{
+    width: 350px !important;
+    transition: all 0.2s ease-in-out;
+  }
+
+  @media (max-width: 1160px){
+    .card{
+      flex-wrap: wrap;
+    }
+
+    .reaserh-card{
+      width: 410px !important;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  @media (max-width: 910px){
+    .reaserh-card{
+      width: 350px !important;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  @media (max-width: 790px){
+    .reaserh-card{
+      width: 100% !important;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

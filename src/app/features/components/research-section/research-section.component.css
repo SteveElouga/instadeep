@@ -1,0 +1,20 @@
+#lastest-research {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  overflow-x: hidden !important;
+}
+
+#lastest-research h2 {
+  font-size: 43px;
+  color: #52276B;
+  padding: 30px 0;
+}
+
+.content-wrap {
+  padding: 0 73px;
+}
+
+.research-grid {
+  padding: 5px 5px 20px;
+  margin: 0 5px;
+}
