@@ -1,11 +1,11 @@
 <section class="login-page">
-  <div class="logo">
-    <img src="img/logo/supremum.png" alt="supremum-logo">
-  </div>
-  <h1>Sign up to Supremum</h1>
+<!--  <div class="logo">-->
+<!--    <img src="img/logo/supremum.png" alt="supremum-logo">-->
+<!--  </div>-->
+<!--  <h1>Sign up to Supremum</h1>-->
   <div class="login-container">
     <form class="login-form">
-      <label for="username">email address</label>
+      <label for="username">Email address</label>
       <input [(ngModel)]="user.email" type="text" id="username" name="username" required>
 
 
@@ -22,17 +22,7 @@
         }
 
       </div>
-
-      <label for="password">Confirm your password</label>
-      <div class="password">
-        <input [(ngModel)]="user.confirmPassword" type="password" id="password-confirm"
-               name="password"
-               required>
-
-      </div>
       <button type="submit" (click)="register()">Sign Up</button>
     </form>
   </div>
-  <p class="create-account">Already have an account?
-    <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sign In</a></p>
 </section>

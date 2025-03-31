@@ -1,0 +1,154 @@
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Fond gris clair, similaire à GitHub */
+}
+
+.logout-button {
+  column-gap: 10px;
+  display: flex; /* Pour aligner l'icône et le texte */
+  align-items: center;
+  justify-content: center;
+  /* Ajustement du padding gauche pour l'icône */
+  padding: 8px 16px 8px 12px;
+  background-color: #fff; /* Fond blanc */
+  color: #24292e; /* Couleur du texte (gris foncé) */
+  border: 1px solid #d1d5da; /* Bordure grise */
+  border-radius: 6px; /* Bordure arrondie */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500; /* Medium font weight */
+  transition: background-color 0.2s ease, border-color 0.2s ease; /* Transition douce */
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), 0 0 0 0 transparent; /* Ombre légère, comme GitHub */
+
+  p{
+    margin: 0;
+  }
+}
+
+.logout-button:hover {
+  background-color: #f6f8fa; /* Fond légèrement gris au survol */
+  border-color: #d1d5da; /* Légère modification de la couleur de la bordure au survol */
+}
+
+.logout-button:active {
+  background-color: #edf0f2; /* Fond encore plus clair au clic */
+  border-color: #b1b8c1; /* Bordure plus foncée au clic */
+  box-shadow: none; /* Supprime l'ombre au clic */
+}
+
+.logout-icon {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+  height: 16px; /* Taille de l'icône */
+  width: 16px;
+  /* Vous pouvez utiliser une icône SVG ici, ou une police d'icônes comme Octicons */
+  /* Exemple avec un SVG inline (remplacez par votre SVG) */
+  /* Vous pouvez trouver une icône de déconnexion appropriée depuis un pack d'icônes comme Phosphor Icons ou Lucide Icons et insérer le SVG ici */
+  /* Exemple d'icône SVG (à remplacer) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 2H7c-1.333 0-3 0-3 4v8c0 4 1.667 4 3 4h2c1.333 0 3 0 3-4V6c0-4-1.667-4-3-4z'%3E%3C/path%3E%3Cpath d='M10 4L14 8l-4 4'%3E%3C/path%3E%3C/svg%3E"); /* Remplacez ceci par le SVG de l'icône de déconnexion */
+  background-repeat: no-repeat;
+  display: inline-block; /* Important pour que la taille SVG fonctionne */
+}
+
+
+/******************************************************************************************************************************************
+/******************************************************************************************************************************************
+/******************************************************************************************************************************************
+/******************************************************************************************************************************************
+ */
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.admin-header {
+  background-color: #24292e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+
+  span{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+.admin-header nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.admin-header nav a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+.admin-header nav img{
+  width: 40px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.admin-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.admin-sidebar {
+  background-color: #f6f8fa;
+  width: 250px;
+  padding: 1rem;
+  border-right: 1px solid #e1e4e8;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.admin-sidebar ul li {
+  margin-bottom: 1rem;
+}
+.admin-sidebar ul li a {
+  text-decoration: none;
+  color: #0366d6;
+  font-weight: bold;
+  position: relative;
+}
+.admin-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.admin-sidebar ul li a::before, .admin-header nav a:before{
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid;
+  transition: all .2s ease-in-out;
+}
+
+.admin-sidebar ul li a.active::before, .admin-header nav a.active:before{
+  width: 100%;
+  transition: all .2s ease-in-out;
+}

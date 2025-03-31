@@ -1,4 +1,35 @@
-<button class="logout-button" (click)="logout()">
-  <span class="logout-icon"></span>
-  Déconnexion
-</button>
+<div class="admin-container">
+  <header class="admin-header">
+    <h1>Supremum</h1>
+    <div>
+      <h1><small><span>{{user()?.email != null ? 'Welcom ' + user()!.email : ''}}</span></small></h1>
+      {{user()?.providerId}}
+    </div>
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Dashboard</a>
+      <a routerLink="/dashboard/settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Settings</a>
+      <a href="https://github.com/?uid={{user()?.uid}}" target="_blank"
+         *ngIf="user()?.photoURL != null"><img [src]="user()!.photoURL"></a>
+    </nav>
+  </header>
+  <div class="admin-body">
+    <aside class="admin-sidebar">
+      <ul>
+        <li><a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Dashboard</a></li>
+        <li><a routerLink="/dashboard/blogs" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Blogs
+        </a></li>
+        <li><a routerLink="/dashboard/users" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Users</a></li>
+        <li><a routerLink="/dashboard/settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Settings</a></li>
+      </ul>
+
+      <button class="logout-button" (click)="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <p>Logout</p>
+      </button>
+    </aside>
+    <main class="admin-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+

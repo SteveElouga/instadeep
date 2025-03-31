@@ -10,7 +10,7 @@
 
       <div class="password-label">
         <label for="password">Password</label>
-        <p class="forgot-password"><a href="#">
+        <p class="forgot-password"><a routerLink="/reset-password">
           Forgot password?</a></p>
       </div>
 
@@ -26,6 +26,11 @@
 
       </div>
       <button type="submit" (click)="login()">Sign In</button>
+      <div class="auth2-login">
+        <div (click)="singInWithGoogle()"><i class="fa-brands fa-google" style="color: #ffffff;"></i></div>
+        <div (click)="singInWithGithub()"><i class="fa-brands fa-github" style="color: #ffffff;"></i></div>
+        <div><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></div>
+      </div>
     </form>
   </div>
   <p class="create-account">New to Supremum? <a routerLink="/register">Create an account</a></p>

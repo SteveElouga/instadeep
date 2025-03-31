@@ -38,4 +38,12 @@ export class LoginComponent{
     this.user.email = ''
     this.user.password = ''
   }
+
+  singInWithGoogle() {
+    this.authService.singInWithGoogle()
+  }
+
+  singInWithGithub() {
+    this.authService.singInWithGithub()
+  }
 }
