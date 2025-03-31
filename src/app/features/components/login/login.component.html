@@ -18,15 +18,15 @@
         <input [(ngModel)]="user.password" [attr.type]="!isVisible ? 'password'  : 'text'" id="password" name="password"
                required>
         @if(isVisible){
-        <i *ngIf="isVisible" class="fa-regular fa-eye" style="color: #ffffff;" (click)="hidePassword()"></i>
+        <i class="fa-regular fa-eye" style="color: #ffffff;" (click)="hidePassword()"></i>
         }
         @else{
-        <i *ngIf="!isVisible" class="fa-regular fa-eye-slash" style="color: #ffffff;" (click)="showPassword()"></i>
+        <i class="fa-regular fa-eye-slash" style="color: #ffffff;" (click)="showPassword()"></i>
         }
 
       </div>
-      <button type="submit">Sign In</button>
+      <button type="submit" (click)="login()">Sign In</button>
     </form>
   </div>
-  <p class="create-account">New to Supremum? <a href="#">Create an account</a></p>
+  <p class="create-account">New to Supremum? <a routerLink="/register">Create an account</a></p>
 </section>

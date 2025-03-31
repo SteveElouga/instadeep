@@ -1,16 +1,19 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+export interface FirebaseConfig {
+  apiKey: string;
+  authDomain: string;
+  projectId: string;
+  storageBucket: string;
+  messagingSenderId: string;
+  appId: string;
+  measurementId: string;
+}
 
-export const environment = {
+export interface Environment {
+  production: boolean;
+  firebase: FirebaseConfig;
+}
+export const environment: Environment = {
   production: false,
-  // Import the functions you need from the SDKs you need
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   firebase : {
     apiKey: "AIzaSyBxEF4t5kR9GXnbsM-3wqaqF7mIAnfxF9U",
     authDomain: "instadeep-angularapp.firebaseapp.com",

@@ -10,6 +10,14 @@ export const routes: Routes = [
     loadComponent: () => import('./features/components/login/login.component').then(m => m.LoginComponent)
   },
   {
-    path: '**', redirectTo: '', pathMatch:'full'
+    path: 'register',
+    loadComponent: () => import('./features/components/register/register.component').then(m => m.RegisterComponent)
+  },
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./features/components/dashboard/dashboard.component').then((m => m.DashboardComponent))
+  },
+  {
+    path: '**', redirectTo: '', pathMatch: 'full'
   }
 ];

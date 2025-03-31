@@ -14,7 +14,7 @@
 
   <nav [ngClass]="!menu_open ? 'menu_nav_close' : 'menu_nav_open'">
     <div [ngClass]="menu_open ? 'menu_nav_div' : 'menu_nav_div_none'">
-      <a routerLink="login" routerLinkActive="login" [routerLinkActiveOptions]="{exact: true}">Sign In</a>
+      <a routerLink="/login" routerLinkActive="login" [routerLinkActiveOptions]="{exact: true}">Sign In</a>
       <a href="#" (mouseenter)="productShow()" (mouseleave)="productHidden()">PRODUCTS</a>
       <a href="#">SOLUTIONS</a>
       <a href="#">RESEARCH</a>
