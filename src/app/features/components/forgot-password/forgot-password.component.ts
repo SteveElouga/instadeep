@@ -8,7 +8,6 @@ import {RouterLink} from '@angular/router';
   standalone: true,
   imports: [
     FormsModule,
-    RouterLink
   ],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.scss'

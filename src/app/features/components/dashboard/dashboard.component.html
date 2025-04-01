@@ -3,13 +3,12 @@
     <h1>Supremum</h1>
     <div>
       <h1><small><span>{{user()?.email != null ? 'Welcom ' + user()!.email : ''}}</span></small></h1>
-      {{user()?.providerId}}
     </div>
     <nav>
       <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Dashboard</a>
       <a routerLink="/dashboard/settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Settings</a>
-      <a href="https://github.com/?uid={{user()?.uid}}" target="_blank"
-         *ngIf="user()?.photoURL != null"><img [src]="user()!.photoURL"></a>
+      <a *ngIf="signedMethod() == 'github'" href="https://github.com/?uid={{user()?.uid}}" target="_blank"><img
+        [src]="user()!.photoURL"></a>
     </nav>
   </header>
   <div class="admin-body">

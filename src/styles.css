@@ -35,3 +35,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .swiper-button-prev{
   background-color: #CF3E2C !important;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

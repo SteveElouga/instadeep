@@ -40,6 +40,10 @@ export const routes: Routes = [
         loadComponent: () => import('./features/components/blogs-management/blogs-management.component').then(m => m.BlogsManagementComponent)
       },
       {
+        path: 'new-blog',
+        loadComponent: () => import('./shared/components/new-blog/new-blog.component').then(m => m.NewBlogComponent)
+      },
+      {
         path: 'users',
         loadComponent: () => import('./features/components/users-management/users-management.component').then(m => m.UsersManagementComponent)
       },

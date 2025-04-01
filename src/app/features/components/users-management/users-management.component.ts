@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {RouterLink, RouterLinkActive} from '@angular/router';
 import {AuthService} from '../../../shared/services/auth.service';
+import {UserModalComponent} from '../../../shared/components/user-modal/user-modal.component';
 
 @Component({
   selector: 'app-users-management',
@@ -9,13 +9,13 @@ import {AuthService} from '../../../shared/services/auth.service';
   imports: [
     ReactiveFormsModule,
     FormsModule,
-    RouterLink,
-    RouterLinkActive
+    UserModalComponent
   ],
   templateUrl: './users-management.component.html',
   styleUrl: './users-management.component.css'
 })
 export class UsersManagementComponent {
+
   user = {
     email: '',
     password: ''
@@ -23,6 +23,17 @@ export class UsersManagementComponent {
   isVisible!: boolean;
 
   constructor(private authService: AuthService) {
+  }
+
+  showModal = false;
+  username = '';
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 
   showPassword(){

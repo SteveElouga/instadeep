@@ -2,7 +2,7 @@ import {UpdatesModel} from '../models/updates.model';
 
 export const BLOGS = [
   {
-    id: 1,
+    id: '1',
     img: "img/blog/_MG_0190.jpg",
     title: "Nervtek Community Challenge 2022: 3rd Edition",
     theme: "Empowering the Growth of Ideas into Sustainable Start-ups",
@@ -24,7 +24,7 @@ export const BLOGS = [
     category: "BLOG"
   },
   {
-    id: 2,
+    id: '2',
     img: "img/blog/IMG-20231118-WA0105.jpg",
     title: "Silicon Mountain Hack my city champions",
     theme: "Supremum Wins Big at the Silicon Mountain Conference 2023 Hackathon",
@@ -71,7 +71,7 @@ export const BLOGS = [
     category: "BLOG"
   },
   {
-    id: 3,
+    id: '3',
     img: "img/blog/IMG-20231027-WA0015_1.jpg",
     title: "Startup 237 finalists--French Embassy",
     theme: "Supremum Selected for the Final Stage of Start-up 237: A Proud Moment for ConcourGuide",
@@ -111,7 +111,7 @@ export const BLOGS = [
     category: "BLOG"
   },
   {
-    id: 4,
+    id: '4',
     img: "img/blog/IMG-20230921-WA0017.webp",
     title: "MINESUP Acknowledgement",
     theme: "Celebrating a Milestone in Cameroon's Entrepreneurial Journey",
@@ -141,7 +141,7 @@ export const BLOGS = [
     category: "BLOG"
   },
   {
-    id: 5,
+    id: '5',
     img: "img/blog/IMG-20240919-WA0111(2)(1).jpg",
     title: "CAMTEL Blue tech challenge",
     theme: "Supremum Makes It to the Top 10 Finalists of the Camtel Blue Tech Challenge 2024",
@@ -183,7 +183,7 @@ export const BLOGS = [
     category: "BLOG"
   },
   {
-    id: 6,
+    id: '6',
     img: "img/blog/CG 1k+ downloads.webp",
     title: "ConcourGuide Reaches 1k+ Downloads",
     theme: "Celebrating a Milestone: ConcourGuide Reaches 1,000 Downloads",
@@ -225,7 +225,7 @@ export const BLOGS = [
     category: "BLOG"
   },
   {
-    id: 7,
+    id: '7',
     img: "img/blog/1.png",
     title: "Transition Series 2024",
     theme: "Empowering Cameroon's Youth: Supremum's Transition Series Program",

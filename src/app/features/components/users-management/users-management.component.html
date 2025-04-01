@@ -1,28 +1,6 @@
-<section class="login-page">
-<!--  <div class="logo">-->
-<!--    <img src="img/logo/supremum.png" alt="supremum-logo">-->
-<!--  </div>-->
-<!--  <h1>Sign up to Supremum</h1>-->
-  <div class="login-container">
-    <form class="login-form">
-      <label for="username">Email address</label>
-      <input [(ngModel)]="user.email" type="text" id="username" name="username" required>
+<div>
+  <button (click)="openModal()">Ouvrir le Modal</button>
+</div>
 
+<app-user-modal [isOpen]="showModal" (close)="closeModal()"></app-user-modal>
 
-      <label for="password">Password</label>
-
-      <div class="password">
-        <input [(ngModel)]="user.password" [attr.type]="!isVisible ? 'password'  : 'text'" id="password" name="password"
-               required>
-        @if(isVisible){
-        <i class="fa-regular fa-eye" style="color: #ffffff;" (click)="hidePassword()"></i>
-        }
-        @else{
-        <i class="fa-regular fa-eye-slash" style="color: #ffffff;" (click)="showPassword()"></i>
-        }
-
-      </div>
-      <button type="submit" (click)="register()">Sign Up</button>
-    </form>
-  </div>
-</section>

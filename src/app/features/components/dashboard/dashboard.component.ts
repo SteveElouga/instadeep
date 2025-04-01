@@ -18,14 +18,15 @@ import {CommonModule} from '@angular/common';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
-export class DashboardComponent{
+export class DashboardComponent {
 
   user: Signal<User | null | undefined> = signal(null)
+  signedMethod!: Signal<string | null | undefined>
 
   constructor(private authService: AuthService) {
     this.user = toSignal(this.authService.currentUser$)
+    this.signedMethod = toSignal(this.authService.signMethodAsObservable$())
   }
-
 
   logout(){
     this.authService.logout()
