@@ -1,4 +1,4 @@
-#footer{
+#footer {
   color: white;
   background-color: #364D55;
   padding: 55px 0 50px;
@@ -6,11 +6,12 @@
   z-index: 1;
   overflow-x: hidden !important;
 }
-.wrap{
+
+.wrap {
   margin: 0 73px;
 }
 
-.wrap ul{
+.wrap ul {
   margin: 45px 0 20px;
   display: flex;
   justify-content: space-between;
@@ -20,11 +21,11 @@
   column-gap: 0;
 }
 
-.footer-nav{
+.footer-nav {
   row-gap: 40px;
 }
 
-.wrap ul li{
+.wrap ul li {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -33,12 +34,12 @@
   row-gap: 10px;
 }
 
-.wrap ul li a{
+.wrap ul li a {
   font-size: 17px;
   color: #CCCCCC;
 }
 
-.wrap ul li ul{
+.wrap ul li ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -46,36 +47,40 @@
   margin: 0;
 }
 
-.wrap ul li ul li{
+.wrap ul li ul li {
   margin: 0 4px 0 0;
 }
 
-.wrap ul li ul li a{
+.wrap ul li ul li a {
   font-size: 13px;
 }
-.footer-extra{
+
+.footer-extra {
   display: flex;
   justify-content: space-between;
   align-items: end;
   column-gap: 70px;
 }
-.footer-extra .svg svg{
+
+.footer-extra .svg svg {
   font-size: 15px;
   width: 200px;
 }
-.copyright-block{
+
+.copyright-block {
   margin: 20px 0 0;
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 50px;
 
-  div{
+  div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
-    a{
+
+    a {
       text-decoration: underline;
       color: white;
       font-size: 14px;
@@ -83,49 +88,58 @@
     }
   }
 }
-.copyright-block p{
+
+.copyright-block p {
   font-size: 13px;
   margin: 0;
 }
-.copyright-block ul{
+
+.copyright-block ul {
   font-size: 14px;
   font-weight: 100;
   display: flex;
   justify-content: start;
   align-items: center;
-  margin:0 0 0 44px;
+  margin: 0 0 0 44px;
 }
-.copyright-block ul li{
+
+.copyright-block ul li {
   margin: 0;
   padding: 0;
 }
-.copyright-block ul li a{
+
+.copyright-block ul li a {
   text-decoration: underline;
 }
-.footer-logo{
+
+.footer-logo {
   margin: 0 63px 0 0;
   gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-.social{
+
+.social {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.left-line{
+
+.left-line {
   border-top: 1px solid #738388;
   float: left;
   width: calc(100% - 333px);
 }
-.social-wrap{
+
+.social-wrap {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.social-wrap a{
+
+.social-wrap a {
   margin: 0 10px;
   border: 1px solid white;
   color: white;
@@ -136,16 +150,19 @@
   align-items: center;
   border-radius: 100%;
 }
-.social-wrap ul{
+
+.social-wrap ul {
   margin: 0;
   max-width: 50px;
 }
-.right-line{
+
+.right-line {
   width: 104px;
   border-top: 1px solid #738388;
   float: left;
 }
-.trigger a{
+
+.trigger a {
   display: block;
   width: 31px;
   height: 31px;
@@ -158,17 +175,19 @@
   font-size: 20px;
 }
 
-.svg a{
+.svg a {
   text-decoration: none;
   display: flex;
   gap: 10px;
   justify-content: start;
   align-items: center;
-  img{
+
+  img {
     width: 100px;
     border-radius: 10px;
   }
-  p{
+
+  p {
     color: #CCC;
     font-family: "Lobster", sans-serif;
     font-weight: 400;
@@ -178,25 +197,25 @@
 }
 
 @media (max-width: 1230px) {
-  .footer-extra{
+  .footer-extra {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 60px;
   }
-  .copright-block-container{
+  .copright-block-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .footer-logo{
+  .footer-logo {
     margin: 0;
     position: relative;
   }
 
-  .footer-logo::before{
+  .footer-logo::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -205,45 +224,49 @@
     bottom: -20px;
   }
 
-  .copyright-block{
+  .copyright-block {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
   }
 
-  .left-line, .right-line{
+  .left-line, .right-line {
     display: none;
   }
 }
 
 @media (max-width: 845px) {
-  .wrap ul{
+  .wrap ul {
     justify-content: start;
   }
 }
 
 @media (max-width: 750px) {
-  .wrap ul{
+  .wrap ul {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
 
-  .footer-nav{
+  .footer-nav {
     row-gap: 30px;
   }
 
-  .wrap ul li{
+  .wrap ul li {
     justify-content: center;
     align-items: center;
     margin: 0;
     row-gap: 10px;
   }
 
-  .wrap ul li ul{
+  .wrap ul li ul {
     justify-content: center;
     align-items: center;
+  }
+
+  .wrap {
+    margin: 0 10px;
   }
 }
