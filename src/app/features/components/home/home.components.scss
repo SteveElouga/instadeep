@@ -97,9 +97,11 @@ h1 {
 .shadow {
   position: relative;
 }
-.shadow{
+
+.shadow {
   margin-bottom: 100px;
 }
+
 .shadow::before {
   content: "";
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -109,8 +111,6 @@ h1 {
   left: 0;
   top: 0;
 }
-
-
 
 
 @media (max-width: 1280px) {
@@ -129,6 +129,30 @@ h1 {
     margin-left: 60px;
   }
 
+  @media (max-width: 930px) {
+    .hero-aside {
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .section-header {
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .content-description {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
   @media (max-width: 750px) {
     .description {
       margin-right: 0;
@@ -143,17 +167,17 @@ h1 {
       font-size: 50px;
     }
 
-    .partner .wrap{
+    .partner .wrap {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    .partner h2{
+    .partner h2 {
       margin-left: 0;
     }
-    #partners-logos{
+    #partners-logos {
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -163,19 +187,18 @@ h1 {
       align-items: center;
       row-gap: 20px;
 
-      a{
+      a {
         display: flex;
         justify-content: center;
         align-items: center;
       }
     }
 
-    .partner .wrap div a img{
+    .partner .wrap div a img {
       width: 100%;
       filter: grayscale(0);
     }
   }
-
 
 
 }

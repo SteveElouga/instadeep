@@ -50,10 +50,10 @@
   transition: 0.2s ease-in-out;
 }
 
-.theme{
+.theme {
   font-weight: 500;
 
-  span{
+  span {
     font-weight: bold;
   }
 }
@@ -61,6 +61,11 @@
 .caption {
   text-align: left;
   padding: 20px 0;
+  //background: red;
+  //display: flex;
+  //flex-direction: column;
+  //gap: 20px;
+  //justify-content: center;
 }
 
 .caption h3 {
@@ -140,7 +145,6 @@ h3:hover {
   font-size: 16px;
   margin-bottom: 16px;
   color: #464646;
-  height: 150px;
 }
 
 .category {
@@ -270,7 +274,7 @@ h3:hover {
 
     .item img {
       height: 100%;
-      object-fit: cover ;
+      object-fit: cover;
     }
 
     .caption p {
@@ -285,16 +289,23 @@ h3:hover {
       height: 200px;
     }
 
-    .carousel{
+    .carousel {
       padding: 40px 20px 105px;
     }
 
-    .custom-prev{
+    .custom-prev {
       left: 10px;
     }
 
-    .custom-next{
+    .custom-next {
       right: 10px;
     }
   }
 }
+
+@media (max-width: 480px) {
+  .caption h3 {
+    font-size: 20px;
+  }
+}
+

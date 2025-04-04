@@ -2,6 +2,12 @@
   padding-top: 50px;
   padding-bottom: 60px;
   overflow-x: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.card::-webkit-scrollbar {
+  display: none !important;
 }
 
 #lastest-research h2 {

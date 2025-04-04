@@ -1,7 +1,8 @@
-import {Component, HostListener, OnInit, signal} from '@angular/core';
+import {AfterViewInit, Component, HostListener, OnInit, signal} from '@angular/core';
 import {ResearchModel} from '../../models/research.model';
 import {RESEARCH} from '../../data/research-items';
 import {CommonModule, DatePipe} from '@angular/common';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-research-items-card',
@@ -13,9 +14,9 @@ import {CommonModule, DatePipe} from '@angular/common';
   templateUrl: './research-items-card.component.html',
   styleUrl: './research-items-card.component.css'
 })
-export class ResearchItemsCardComponent implements OnInit {
+export class ResearchItemsCardComponent implements OnInit, AfterViewInit {
   research_items = signal<ResearchModel[]>(RESEARCH)
-  bg_img = "img/research-bg-home.webp"
+
 
   displayCount = 3
 
@@ -23,12 +24,18 @@ export class ResearchItemsCardComponent implements OnInit {
     this.updateDisplayCount()
   }
 
+  ngAfterViewInit() {
+    AOS.init()
+  }
+
   @HostListener('window:resize', ['$event'])
-  onResize(){
+  onResize() {
     this.updateDisplayCount()
   }
 
   updateDisplayCount() {
     this.displayCount = window.innerWidth <= 1160 ? 4 : 3
   }
+
+
 }

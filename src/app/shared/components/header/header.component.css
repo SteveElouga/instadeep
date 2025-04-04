@@ -8,7 +8,7 @@ header {
   z-index: 30;
 }
 
-.title{
+.title {
   font-size: 50px;
   font-weight: bold;
   font-family: "Cormorant Garamond", serif;
@@ -16,14 +16,14 @@ header {
   font-style: italic;
 }
 
-.title div a{
+.title div a {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
 
-img{
+img {
   width: 100px;
   height: 100px;
   border-radius: 10px;
@@ -195,12 +195,14 @@ nav a:hover {
     margin-right: 0;
     z-index: 30;
   }
+
   .menu_nav_div {
     transform: translateX(0) !important;
     opacity: 1;
     transition: 0.2s ease-in-out;
   }
-  .menu_nav_div_none{
+
+  .menu_nav_div_none {
     transform: translateX(100%) !important;
     opacity: 0;
     transition: 0.2s ease-in-out;
@@ -222,6 +224,22 @@ nav a:hover {
   @media (max-width: 930px) {
     .products {
       left: 20% !important;
+    }
+
+    .title div a {
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    .hamburger-menu {
+      top: 10px;
     }
   }
 

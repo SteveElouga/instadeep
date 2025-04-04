@@ -19,7 +19,7 @@ import {tap} from 'rxjs';
   styleUrl: './blogs-management.component.css'
 })
 export class BlogsManagementComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'title', 'theme', 'date'];
+  displayedColumns: string[] = ['id', 'title', 'theme', 'date', 'img', 'actions'];
   dataSource: MatTableDataSource<UpdatesModel>;
   blogs = signal<UpdatesModel[]>([])
 
@@ -41,8 +41,16 @@ export class BlogsManagementComponent implements OnInit {
       tap((data) => {
           data.forEach((item) => {
               let blog = item.payload.toJSON() as UpdatesModel;
-              this.blogs.update(currentBlogs => [...currentBlogs!, blog]);
-              console.log('Blog ajouté:', blog);
+              this.blogs.update(currentBlogs => [...currentBlogs!, {
+                id: item.key || null,
+                img: blog.img,
+                title: blog.title,
+                theme: blog.theme,
+                link: blog.link,
+                date: blog.date,
+                content: blog.content,
+                category: blog.category,
+              }]);
             }
           )
         }
@@ -79,6 +87,17 @@ export class BlogsManagementComponent implements OnInit {
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
+    }
+  }
+
+  delete(id: string) {
+    console.log(id);
+    if (window.confirm('Are you sure you want to delete the blog?')) {
+      this.blogService.deleteBlog(id).then(() => {
+        console.log('Delete succesfully')
+      }).catch(err => {
+        console.log(err.message);
+      })
     }
   }
 }

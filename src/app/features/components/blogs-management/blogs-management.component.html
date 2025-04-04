@@ -34,6 +34,18 @@
       <td *matCellDef="let row" mat-cell> {{ row.date }}</td>
     </ng-container>
 
+    <ng-container matColumnDef="img">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> Image</th>
+      <td *matCellDef="let row" mat-cell> {{ row.img }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> Actions</th>
+      <td *matCellDef="let row" class="actions-class" mat-cell><i (click)="delete(row.id)"
+                                                                  class="fa-solid fa-trash" style="color: #ec1b23;"></i>
+      </td>
+    </ng-container>
+
     <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
     <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
 

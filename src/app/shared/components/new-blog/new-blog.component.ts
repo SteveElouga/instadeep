@@ -1,8 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {BlogService} from '../../services/blog.service';
 import {UpdatesModel} from '../../models/updates.model';
 import {CommonModule} from '@angular/common';
+import {BlogService} from '../../services/blog.service';
+import {EditorModule} from 'primeng/editor';
+import {transition} from '@angular/animations';
+import {DatePicker} from 'primeng/datepicker';
+import {Bold, ClassicEditor, Essentials, Italic, Paragraph} from 'ckeditor5';
+import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
 
 @Component({
   selector: 'app-new-blog',
@@ -10,7 +15,10 @@ import {CommonModule} from '@angular/common';
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    EditorModule,
+    DatePicker,
+    CKEditorModule
   ],
   templateUrl: './new-blog.component.html',
   styleUrl: './new-blog.component.css'
@@ -21,29 +29,49 @@ export class NewBlogComponent implements OnInit {
     content: '',
     date: new Date(),
     id: '',
-    img: '',
+    img: null,
     link: '',
     theme: '',
     title: ''
 
   };
-  options: string[] = ['EVENT', 'BLOG'];
-
-  constructor(private blogService: BlogService) {
+  public Editor = ClassicEditor;
+  public config = {
+    plugins: [Essentials, Paragraph, Bold, Italic],
+    toolbar: ['undo', 'redo', '|', 'bold', 'italic']
 
   }
 
-  ngOnInit() {
+  options: string[] = ['EVENT', 'BLOG'];
+  selectedFiles!: File;
+  protected readonly transition = transition;
+
+  constructor(private blogService: BlogService) {
+  }
+
+  public ngOnInit(): void {
+
   }
 
   addBlog() {
     console.log(this.blog);
     this.blogService.addBlog(this.blog)
+  }
 
+  onFileSelected(event: Event): void {
+    const element = event.currentTarget as HTMLInputElement;
+    if (element.files) {
+      this.selectedFiles = element.files[0];
+      this.blog.img = this.selectedFiles;
+    }
+  }
+
+  uploadImages() {
+    this.blogService.uploadImages(this.selectedFiles)
   }
 
   resetForm() {
-    this.blog.img = ''
+    this.blog.img = null
     this.blog.title = ''
     this.blog.theme = ''
     this.blog.link = ''
@@ -51,5 +79,4 @@ export class NewBlogComponent implements OnInit {
     this.blog.content = ''
     this.blog.category = ''
   }
-
 }

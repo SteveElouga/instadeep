@@ -1,12 +1,10 @@
-import {UpdatesModel} from '../models/updates.model';
-
 export const BLOGS = [
   {
     id: '1',
     img: "img/blog/_MG_0190.jpg",
     title: "Nervtek Community Challenge 2022: 3rd Edition",
     theme: "Empowering the Growth of Ideas into Sustainable Start-ups",
-    link: "https://www.instadeep.com/2024/12/decoding-our-genome-with-nucleotide-transformers/",
+    link: "#",
     date: new Date(),
     content: "The Nervtek Community Challenge (NCC) has become a hallmark initiative aimed at fostering innovation and community development among youth in Cameroon. Since its inception, Nervtek has consistently provided a platform for young tech entrepreneurs and innovators to leverage technology in addressing pressing issues across urban and rural communities.\n" +
       "A Platform for Innovation and Growth\n" +
@@ -28,7 +26,7 @@ export const BLOGS = [
     img: "img/blog/IMG-20231118-WA0105.jpg",
     title: "Silicon Mountain Hack my city champions",
     theme: "Supremum Wins Big at the Silicon Mountain Conference 2023 Hackathon",
-    link: "https://www.instadeep.com/2024/11/karim-beguir-addresses-g7-presenting-vision-for-ai-and-sustainability-on-a-global-stage/",
+    link: "#",
     date: new Date(),
     content: "Teamwork Makes the Dream Work!\n" +
       "\n" +
@@ -75,7 +73,7 @@ export const BLOGS = [
     img: "img/blog/IMG-20231027-WA0015_1.jpg",
     title: "Startup 237 finalists--French Embassy",
     theme: "Supremum Selected for the Final Stage of Start-up 237: A Proud Moment for ConcourGuide",
-    link: "https://www.instadeep.com/2025/02/building-the-future-of-food-security-geoai-hack/",
+    link: "#",
     date: new Date(),
     content: "We are thrilled to share that Supremum, with our groundbreaking product ConcourGuide, has been selected for the final stage of the Start-up 237 program—\"\"100 Projects Made in Camer.\"\" Out of a competitive pool of over 300 startups, this recognition is a testament to our commitment to revolutionizing education and empowering young people in Cameroon.\n" +
       "\n" +
@@ -115,7 +113,7 @@ export const BLOGS = [
     img: "img/blog/IMG-20230921-WA0017.webp",
     title: "MINESUP Acknowledgement",
     theme: "Celebrating a Milestone in Cameroon's Entrepreneurial Journey",
-    link: "https://www.instadeep.com/2025/02/ai-action-summit-coming-together-to-build-the-future-of-ai/",
+    link: "#",
     date: new Date(),
     content: "We are thrilled to announce that ConcourGuide, our innovative mobile app for career orientation and exam preparation, has been selected for the prestigious Start-up 237 program, \"\"100 startups made in Camer,\"\" in Yaoundé, Cameroon. This achievement marks a significant milestone in our journey, and we are honored to be part of this groundbreaking initiative.\n" +
       "\n" +
@@ -145,7 +143,7 @@ export const BLOGS = [
     img: "img/blog/IMG-20240919-WA0111(2)(1).jpg",
     title: "CAMTEL Blue tech challenge",
     theme: "Supremum Makes It to the Top 10 Finalists of the Camtel Blue Tech Challenge 2024",
-    link: "https://www.instadeep.com/2025/01/geoai-hackathon-tackling-africas-locust-crisis-with-ai-innovation/",
+    link: "#",
     date: new Date(),
     content: "We are excited to announce that Supremum, powered by our innovative product ConcourGuide, has been selected as one of the Top 10 finalists in the Blue Academic Innovation category of the prestigious Camtel Blue Tech Challenge 2024! Out of a staggering 256 applications, this recognition is a significant milestone for our team and a testament to our commitment to revolutionizing education in Cameroon.\n" +
       "About the Camtel Blue Tech Challenge\n" +
@@ -187,7 +185,7 @@ export const BLOGS = [
     img: "img/blog/CG 1k+ downloads.webp",
     title: "ConcourGuide Reaches 1k+ Downloads",
     theme: "Celebrating a Milestone: ConcourGuide Reaches 1,000 Downloads",
-    link: "https://www.instadeep.com/2024/12/celebrating-breakthroughs-dr-andrija-sente-honoured-during-nobel-prize-week/",
+    link: "#",
     date: new Date(),
     content: "A Message of Gratitude and Appreciation\n" +
       "\n" +
@@ -229,7 +227,7 @@ export const BLOGS = [
     img: "img/blog/1.png",
     title: "Transition Series 2024",
     theme: "Empowering Cameroon's Youth: Supremum's Transition Series Program",
-    link: "https://www.instadeep.com/2024/12/instadeep-showcases-8-papers-at-neurips-2024/",
+    link: "#",
     date: new Date(),
     content: "Guiding Students Towards a Brighter Future\n" +
       "\n" +

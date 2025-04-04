@@ -1,17 +1,17 @@
 import {
+  AfterViewInit,
   Component,
-  CUSTOM_ELEMENTS_SCHEMA, ElementRef,
-  HostListener,
+  CUSTOM_ELEMENTS_SCHEMA,
   Inject,
   Input,
   LOCALE_ID,
   OnInit,
-  Renderer2,
-  ViewChild
+  Renderer2
 } from '@angular/core';
 import {UpdatesModel} from '../../models/updates.model';
 import {CommonModule} from '@angular/common';
 import {TruncatePipe} from '../../pipes/truncate.pipe';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-blogs-card',
@@ -24,7 +24,7 @@ import {TruncatePipe} from '../../pipes/truncate.pipe';
   templateUrl: './blogs-card.component.html',
   styleUrl: './blogs-card.component.scss',
 })
-export class BlogsCardComponent implements OnInit {
+export class BlogsCardComponent implements OnInit, AfterViewInit {
 
   @Input()
   blogs: UpdatesModel[] = []
@@ -32,7 +32,11 @@ export class BlogsCardComponent implements OnInit {
   currentIndex = 0;
   displayedItems: any[] = []; // Tableau pour les éléments affichés
 
-  constructor(@Inject(LOCALE_ID) public locale: string, private  renderer: Renderer2) {
+  constructor(@Inject(LOCALE_ID) public locale: string, private renderer: Renderer2) {
+  }
+
+  get currentItems() {
+    return this.displayedItems;
   }
 
   ngOnInit(): void {
@@ -47,9 +51,8 @@ export class BlogsCardComponent implements OnInit {
 
   }
 
-
-  get currentItems() {
-    return this.displayedItems;
+  ngAfterViewInit() {
+    AOS.init()
   }
 
   slideLeft() {

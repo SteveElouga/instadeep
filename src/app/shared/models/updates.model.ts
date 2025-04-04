@@ -1,6 +1,6 @@
 export class UpdatesModel {
-  id!: string;
-  img!: string;
+  id!: string | null;
+  img!: string | File | null;
   title!: string;
   theme!: string;
   link!: string;

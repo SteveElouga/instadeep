@@ -55,7 +55,7 @@
     margin-left: 0;
   }
 
-  .intro p{
+  .intro p {
     margin-left: 60px;
   }
 
@@ -63,7 +63,7 @@
     margin: 0 0px 100px 0;
   }
 
-  app-buildings-card{
+  app-buildings-card {
     margin: 0;
   }
 
@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 1330px) {
-  .intro p{
+  .intro p {
     width: 300px;
   }
   .building-1 {
@@ -121,7 +121,7 @@
     padding-right: 60px !important;
   }
 
-  .intro{
+  .intro {
     margin-left: 60px;
   }
 
@@ -140,6 +140,23 @@
     left: 0 !important;
     top: 0;
   }
+}
+
+@media (max-width: 930px) {
+  #buildings {
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .intro {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+
 }
 
 @media (max-width: 750px) {

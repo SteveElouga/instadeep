@@ -1,34 +1,38 @@
-<div class="carousel" style="background-image: url(img/recent-bg@1x.webp); background-repeat: no-repeat; background-size: cover" >
+<div class="carousel"
+     style="background-image: url(img/recent-bg@1x.webp); background-repeat: no-repeat; background-size: cover">
   <div class="carousel-inner">
-    <swiper-container  autoplay="true" [slidesPerView]="3"   loop="true">
-      @for(item of blogs; track item.id){
-      <swiper-slide>
-        <div class="item">
-          <a class="img-item" href="{{ item.link }}">
-            <div class="img-container">
-              <img [src]="item.img" alt="{{ item.title }}">
-            </div>
-          </a>
-          <div class="caption">
-            <a href="{{item.link}}">
-              <h3>{{ item.title | truncate : 40}}</h3>
+    <swiper-container [slidesPerView]="3" autoplay="true" loop="true">
+      @for (item of blogs; track item.id) {
+        <swiper-slide data-aos="fade-up"
+                      data-aos-easing="ease-in-out"
+                      data-aos-mirror="true"
+                      data-aos-once="false">
+          <div class="item">
+            <a class="img-item" href="{{ item.link }}">
+              <div class="img-container">
+                <img [src]="item.img" alt="{{ item.title }}">
+              </div>
             </a>
-            <p class="date-update">on {{ item.date | date:'mediumDate' : '' : locale }} |
-            {{ item.date | date:'shortTime' }}</p>
-            <p class="theme"><span>Theme</span> : {{item.theme}}</p>
-            <p class="content">{{ item.content | truncate : 200 }}</p>
-            <a class="category" [href]="item.link">{{item.category}}</a>
+            <div class="caption">
+              <a href="{{item.link}}">
+                <h3>{{ item.title | truncate : 40 }}</h3>
+              </a>
+              <p class="date-update">on {{ item.date | date:'mediumDate' : '' : locale }} |
+                {{ item.date | date:'shortTime' }}</p>
+              <p class="theme"><span>Theme</span> : {{ item.theme }}</p>
+              <p class="content" style="margin-bottom: 30px">{{ item.content | truncate : 200 }}</p>
+              <a class="category" [href]="item.link">{{ item.category }}</a>
+            </div>
           </div>
-        </div>
-      </swiper-slide>
+        </swiper-slide>
       }
     </swiper-container>
   </div>
 </div>
-<div id="custom-prev" class="custom-prev">
+<div class="custom-prev" id="custom-prev">
   <i class="fa-solid fa-arrow-left"></i>
 </div>
-<div id="custom-next" class="custom-next">
+<div class="custom-next" id="custom-next">
   <i class="fa-solid fa-arrow-right"></i>
 </div>
 

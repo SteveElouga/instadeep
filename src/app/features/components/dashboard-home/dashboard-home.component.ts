@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import {RouterLink} from '@angular/router';
     RouterLink
   ],
   templateUrl: './dashboard-home.component.html',
-  styleUrl: './dashboard-home.component.css'
+  styleUrl: './dashboard-home.component.scss'
 })
 export class DashboardHomeComponent {
 

@@ -1,12 +1,12 @@
 <section class="login-page">
   <div class="logo">
-    <img src="img/logo/supremum.png" alt="supremum-logo">
+    <img alt="supremum-logo" src="img/logo/supremum.png">
   </div>
   <h1>Sign up to Supremum</h1>
   <div class="login-container">
     <form class="login-form">
       <label for="username">email address</label>
-      <input [(ngModel)]="user.email" type="text" id="username" name="username" required>
+      <input [(ngModel)]="user.email" id="username" name="username" required type="text">
 
 
       <label for="password">Password</label>
@@ -14,25 +14,29 @@
       <div class="password">
         <input [(ngModel)]="user.password" [attr.type]="!isVisible ? 'password'  : 'text'" id="password" name="password"
                required>
-        @if(isVisible){
-        <i class="fa-regular fa-eye" style="color: #ffffff;" (click)="hidePassword()"></i>
-        }
-        @else{
-        <i class="fa-regular fa-eye-slash" style="color: #ffffff;" (click)="showPassword()"></i>
+        @if (isVisible) {
+          <i class="fa-regular fa-eye" style="color: #ffffff;" (click)="hidePassword()"></i>
+        } @else {
+          <i class="fa-regular fa-eye-slash" style="color: #ffffff;" (click)="showPassword()"></i>
         }
 
       </div>
 
       <label for="password">Confirm your password</label>
       <div class="password">
-        <input [(ngModel)]="user.confirmPassword" type="password" id="password-confirm"
-               name="password"
-               required>
+        <input [(ngModel)]="user.confirmPassword" id="password-confirm" name="password"
+               required
+               type="password">
 
       </div>
-      <button type="submit" (click)="register()">Sign Up</button>
+      <button (click)="register()" type="submit">Sign Up</button>
+      <div class="auth2-login">
+        <div (click)="singInWithGoogle()"><i class="fa-brands fa-google" style="color: #ffffff;"></i></div>
+        <div (click)="singInWithGithub()"><i class="fa-brands fa-github" style="color: #ffffff;"></i></div>
+        <div><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></div>
+      </div>
     </form>
   </div>
   <p class="create-account">Already have an account?
-    <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sign In</a></p>
+    <a [routerLinkActiveOptions]="{exact: true}" routerLink="/login" routerLinkActive="active">Sign In</a></p>
 </section>

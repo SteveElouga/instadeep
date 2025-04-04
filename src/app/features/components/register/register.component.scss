@@ -1,4 +1,4 @@
-.login-page{
+.login-page {
   background: linear-gradient(to right, #331E77, #CF3E2C);
   height: 100vh;
   width: 100vw;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-h1{
+h1 {
   color: white;
 }
 
@@ -30,11 +30,11 @@ h1{
   justify-content: center;
   align-items: center;
 
-img{
-  width: 100px;
-  object-fit: cover;
-  border-radius: 100%;
-}
+  img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
 }
 
 .logo svg {
@@ -68,34 +68,34 @@ input {
   transition: all .2s ease-in-out;
 }
 
-input:focus{
+input:focus {
   transition: all .2s ease-in-out;
   outline: 2px solid #154CD6;
 }
 
-.password-label{
+.password-label {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#password, #password-confirm{
+#password, #password-confirm {
   width: 100%;
 }
 
-.password{
+.password {
   width: 100%;
   margin-bottom: 0 !important;
   position: relative;
 
-i{
-  position: absolute;
-  right: 10px;
-  top:50%;
-  cursor: pointer;
-  transform: translateY(-50%);
-}
+  i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
 }
 
 button {
@@ -125,5 +125,36 @@ a {
   color: #154CD6;
   text-decoration: none;
   font-size: 14px;
+}
+
+.auth2-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.auth2-login div {
+  position: relative;
+}
+
+.auth2-login div::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid white;
+  transition: 0.2s all ease-in-out;
+}
+
+.auth2-login div:hover::before {
+  width: 100%;
+  transition: 0.2s all ease-in-out;
 }
 

@@ -9,15 +9,27 @@ button {
   color: white;
   cursor: pointer;
 }
+
 button:disabled {
   background-color: #aaa;
   cursor: not-allowed;
 }
-.new-blog{
+
+.new-blog {
   display: block;
   margin: 30px 0;
 }
-.new-blog button{
-  width: 150px!important;
+
+.new-blog button {
+  width: 150px !important;
   background-color: #28a745;
+}
+
+td.actions-class {
+  text-align: center;
+
+  i {
+    cursor: pointer;
+    font-size: 18px;
+  }
 }
