@@ -1,11 +1,11 @@
 #buildings {
-  margin: 0 16px 100px 60px;
+  margin: 0 16px 0 60px;
   position: relative !important;
   overflow-x: hidden;
 }
 
 .intro {
-  margin-bottom: 100px;
+  //margin-bottom: 100px;
   margin-left: 60px;
   font-weight: 200;
   height: 700px;
@@ -51,7 +51,7 @@
 
 @media (max-width: 1480px) {
   .intro {
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
     margin-left: 0;
   }
 
@@ -60,7 +60,7 @@
   }
 
   #buildings {
-    margin: 0 0px 100px 0;
+    margin: 0;
   }
 
   app-buildings-card {
@@ -145,6 +145,8 @@
 @media (max-width: 930px) {
   #buildings {
 
+    min-height: 2350px !important;
+
     h2 {
       font-size: 30px;
     }
@@ -162,7 +164,7 @@
 @media (max-width: 750px) {
   #buildings {
     padding-right: 0 !important;
-    min-height: 2150px !important;
+    min-height: 2100px !important;
   }
 
   #buildings h2, .intro {
@@ -172,6 +174,18 @@
 
 @media (max-width: 580px) {
   #buildings {
-    min-height: 2100px !important;
+    min-height: 2030px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  #buildings {
+    min-height: 1980px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  #buildings {
+    min-height: 2010px !important;
   }
 }

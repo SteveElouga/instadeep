@@ -9,8 +9,6 @@ import {getAuth, provideAuth} from '@angular/fire/auth';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import {providePrimeNG} from 'primeng/config';
-import Aura from '@primeng/themes/aura';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBxEF4t5kR9GXnbsM-3wqaqF7mIAnfxF9U",
@@ -36,11 +34,6 @@ export const appConfig: ApplicationConfig = {
       AngularFireDatabaseModule,
       AngularFirestoreModule
     ),
-    providePrimeNG({
-      theme: {
-        preset: Aura
-      }
-    })
   ]
 };
 

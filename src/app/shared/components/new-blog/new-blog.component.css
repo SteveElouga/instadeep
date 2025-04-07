@@ -63,7 +63,7 @@ select, option {
 input:focus, select:focus, .textarea:focus {
   outline: 2px solid #154CD6;
   padding: 10px;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out .1s;
 }
 
 button {
@@ -83,7 +83,23 @@ button:hover {
   background-color: #207933;
 }
 
-/*button:disabled {*/
-/*  background-color: #aaa;*/
-/*  cursor: not-allowed;*/
-/*}*/
+::ng-deep .ql-toolbar.ql-snow {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+::ng-deep .ql-container.ql-snow {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top: none; /* Pour éviter double bordure avec la toolbar */
+}
+
+::ng-deep .ql-container {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+::ng-deep .ql-editor:focus {
+  outline: none;
+  box-shadow: none;
+}

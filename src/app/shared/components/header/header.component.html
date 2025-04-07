@@ -14,17 +14,12 @@
 
   <nav [ngClass]="!menu_open ? 'menu_nav_close' : 'menu_nav_open'">
     <div [ngClass]="menu_open ? 'menu_nav_div' : 'menu_nav_div_none'">
-      <a [routerLinkActiveOptions]="{exact: true}" routerLink="/login" routerLinkActive="login">Sign In</a>
-      <a [routerLinkActiveOptions]="{exact: true}" routerLink="/dashboard/new-blog" routerLinkActive="new-blog">Create
-        Blog</a>
       <a (mouseenter)="productShow()" (mouseleave)="productHidden()" href="#">PRODUCTS</a>
       <a href="#">SOLUTIONS</a>
       <a href="#">RESEARCH</a>
-      <a href="#">NEWS</a>
       <a href="#">ABOUT</a>
       <a href="#">CAREERS</a>
       <a href="#">CONTACT</a>
-      <a href="#">ETHICS CONTACT POINT</a>
     </div>
 
     <div [ngClass]="showProduct ? 'showProduct' : 'dontShowProduct'" class="products">

@@ -3,15 +3,17 @@
   background-color: #F4F4F4;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  /*height: 300px;*/
 }
 
-.single-press img{
+.single-press img {
   width: 100px;
   height: 100px;
   object-fit: contain;
 }
 
-.single-press svg{
+.single-press svg {
   width: 150px;
   height: 100px;
   object-fit: contain;
@@ -20,7 +22,6 @@
 .press-container {
   margin: 0 45px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: start;
   align-items: center;
 }
@@ -32,35 +33,96 @@
   width: 340px !important;
 }
 
-.press-container div {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.press-lg {
+  width: 100% !important;
+  display: flex;
   gap: 30px;
   overflow: hidden;
+  justify-content: space-between;
   align-items: center;
 }
 
-#press-logos{
-  width: 1020px;
+#press-logos {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.single-press .press-logo{
+.single-press .press-logo {
   width: 200px;
   height: auto;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1020px) {
+  .press-container {
+    flex-direction: column;
+    align-items: start;
+  }
+
   .press-container div {
-    display: flex;
-    flex-wrap: wrap;
+    gap: 0px;
   }
 }
 
+.press-lg {
+  width: 100%
+}
+
 @media (max-width: 750px) {
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
   .press-container div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .press-container div {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .press-container {
+    margin: 0 20px;
+  }
+
+  .press-container {
+    overflow: hidden;
+  }
+
+  .press-lg {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: start;
+    width: fit-content !important;
+    align-items: center;
+  }
+
+  .press-lg div {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .marquee {
+    overflow: hidden;
+    animation: scroll-up 10s linear infinite;
+  }
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }

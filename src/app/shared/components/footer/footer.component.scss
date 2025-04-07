@@ -55,8 +55,16 @@
   font-size: 13px;
 }
 
+.copright-block-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .footer-extra {
   display: flex;
+  //flex-wrap: wrap;
   justify-content: space-between;
   align-items: end;
   column-gap: 70px;
@@ -204,10 +212,7 @@
     gap: 60px;
   }
   .copright-block-container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .footer-logo {
@@ -237,7 +242,11 @@
 }
 
 @media (max-width: 845px) {
+  #footer {
+    padding-top: 40px;
+  }
   .wrap ul {
+    margin-top: 0;
     justify-content: start;
   }
 }

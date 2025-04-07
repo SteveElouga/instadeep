@@ -1,13 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {UpdatesModel} from '../../models/updates.model';
 import {CommonModule} from '@angular/common';
 import {BlogService} from '../../services/blog.service';
-import {EditorModule} from 'primeng/editor';
-import {transition} from '@angular/animations';
-import {DatePicker} from 'primeng/datepicker';
-import {Bold, ClassicEditor, Essentials, Italic, Paragraph} from 'ckeditor5';
-import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
+import {QuillModule} from 'ngx-quill';
 
 @Component({
   selector: 'app-new-blog',
@@ -16,14 +12,29 @@ import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    EditorModule,
-    DatePicker,
-    CKEditorModule
+    QuillModule
   ],
   templateUrl: './new-blog.component.html',
   styleUrl: './new-blog.component.css'
 })
-export class NewBlogComponent implements OnInit {
+export class NewBlogComponent {
+  modules = {
+    toolbar: [
+      [{'header': [1, 2, 3, false]}],
+      ['bold', 'italic', 'underline', 'strike'],
+      ['blockquote', 'code-block'],
+      [{'list': 'ordered'}, {'list': 'bullet'}],
+      [{'script': 'sub'}, {'script': 'super'}],
+      [{'indent': '-1'}, {'indent': '+1'}],
+      [{'direction': 'rtl'}],
+      [{'size': ['small', false, 'large', 'huge']}],
+      [{'color': []}, {'background': []}],
+      [{'font': []}],
+      [{'align': []}],
+      ['link', 'image', 'video'],
+      ['clean']
+    ]
+  };
   blog: UpdatesModel = {
     category: 'BLOG',
     content: '',
@@ -35,27 +46,18 @@ export class NewBlogComponent implements OnInit {
     title: ''
 
   };
-  public Editor = ClassicEditor;
-  public config = {
-    plugins: [Essentials, Paragraph, Bold, Italic],
-    toolbar: ['undo', 'redo', '|', 'bold', 'italic']
-
-  }
 
   options: string[] = ['EVENT', 'BLOG'];
   selectedFiles!: File;
-  protected readonly transition = transition;
+
 
   constructor(private blogService: BlogService) {
   }
 
-  public ngOnInit(): void {
-
-  }
-
   addBlog() {
     console.log(this.blog);
-    this.blogService.addBlog(this.blog)
+    alert('wdvkwvw')
+    // this.blogService.addBlog(this.blog)
   }
 
   onFileSelected(event: Event): void {

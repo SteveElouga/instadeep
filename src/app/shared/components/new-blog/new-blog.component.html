@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
         <label for="date">Date:</label>
-        <p-datepicker [(ngModel)]="blog.date" id="date" name="date" type="date"/>
+
       </div>
       <div class="form-group">
         <label for="category">Category:</label>
@@ -34,10 +34,16 @@
     </div>
     <div class="form-group">
       <label for="content">Content:</label>
-      <p-editor [(ngModel)]="blog.content" [styleClass]="'textarea'"
-                [style]="{ height: '320px', width: '100%', transition: 'all ease-in-out .2s' }"
-                class="textarea"
-                id="content" name="content"/>
+      <quill-editor
+        [(ngModel)]="blog.content"
+        [modules]="modules"
+        [styles]="{height: '320px', borderBottomLeftRadius: '10px'}"
+        class="quill-editor"
+        contenteditable="true"
+        id="content"
+        name="content"
+        placeholder="Commence à écrire ici..."
+      ></quill-editor>
     </div>
     <button (click)="addBlog()" type="submit">Add Blog</button>
   </form>
